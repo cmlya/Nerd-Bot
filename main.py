@@ -38,7 +38,7 @@ def inline_query(update: Update, context: CallbackContext) -> None:
                                                           "% sagzan!" + Response.double_emoji()),
         ),
     ]
-    update.inline_query.answer(results)
+    update.inline_query.answer(results, cache_time=0)
 
 
 def error(update, context):
